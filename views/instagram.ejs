@@ -1,0 +1,17 @@
+ <%-include("includes/head.ejs")%>
+ <body>
+    <h1>Welcome to profile of: @<%=data.name%></h1>
+
+    <button>Follow</button>
+    <button>Message</button>
+    <p>Followers: <b><%=data.followers%></b></p>
+    <p>Following: <b><%=data.following%></b></p>
+    <%for(obj of data.posts){%>
+    <img src="<%=obj.image%>" height="200px" alt="" />
+    <p>Likes: <b><%=obj.likes%></b></p>
+    <p>Comments: <b><%=obj.comments%></b></p>
+    <%}%>
+    <ul></ul>
+    <%-include("includes/footer.ejs")%>
+  </body>
+</html>
